@@ -30,6 +30,11 @@
    @file opus_types.h
    @brief Opus reference implementation types
 */
+#ifdef ARDUINO
+#include "opus_config.h"
+#endif
+
+
 #ifndef OPUS_TYPES_H
 #define OPUS_TYPES_H
 
