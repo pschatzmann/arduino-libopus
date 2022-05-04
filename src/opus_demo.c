@@ -26,8 +26,10 @@
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#ifndef ARDUINO
+
+#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
+#include "opus_config.h"
 #endif
 
 #include <stdio.h>
@@ -890,3 +892,5 @@ failure:
     free(fbytes);
     return ret;
 }
+
+#endif

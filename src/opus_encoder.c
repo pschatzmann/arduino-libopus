@@ -25,8 +25,8 @@
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
+#include "opus_config.h"
 #endif
 
 #include <stdarg.h>
@@ -46,9 +46,9 @@
 #include "mathops.h"
 #include "tuning_parameters.h"
 #ifdef FIXED_POINT
-#include "fixed/structs_FIX.h"
+#include "silk/fixed/structs_FIX.h"
 #else
-#include "float/structs_FLP.h"
+#include "silk/float/structs_FLP.h"
 #endif
 
 #define MAX_ENCODER_BUFFER 480

@@ -4,13 +4,13 @@
 #undef CPU_INFO_BY_ASM
 
 /* Get CPU Info by c method */
-#undef CPU_INFO_BY_C
+#define CPU_INFO_BY_C 1
 
 /* Custom modes */
 #undef CUSTOM_MODES
 
 /* Do not build the float API */
-#define DISABLE_FLOAT_API
+#undef DISABLE_FLOAT_API 
 
 /* Disable bitstream fixes from RFC 8251 */
 #undef DISABLE_UPDATE_DRAFT
@@ -25,13 +25,13 @@
 #undef FIXED_DEBUG
 
 /* Compile as fixed-point (for machines without a fast enough FPU) */
-#define FIXED_POINT
+#undef FIXED_POINT 
 
 /* Float approximations */
 #undef FLOAT_APPROX
 
 /* Fuzzing */
-#undef FUZZING
+#define FUZZING 1
 
 /* Define to 1 if you have the <alloca.h> header file. */
 #undef HAVE_ALLOCA_H
@@ -43,22 +43,22 @@
 #undef HAVE_DLFCN_H
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-#define HAVE_INTTYPES_H
+#define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the `lrint' function. */
-#undef HAVE_LRINT
+#define HAVE_LRINT 1
 
 /* Define to 1 if you have the `lrintf' function. */
-#undef HAVE_LRINTF
+#define HAVE_LRINTF 1
 
 /* Define to 1 if you have the <memory.h> header file. */
-#define HAVE_MEMORY_H
+#define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
-#define HAVE_STDINT_H
+#define HAVE_STDINT_H 1
 
 /* Define to 1 if you have the <stdlib.h> header file. */
-#define HAVE_STDLIB_H
+#define HAVE_STDLIB_H 1
 
 /* Define to 1 if you have the <strings.h> header file. */
 #undef HAVE_STRINGS_H
@@ -124,7 +124,7 @@
 #undef OPUS_ARM_PRESUME_NEON_INTR
 
 /* This is a build of OPUS */
-#define OPUS_BUILD
+#define OPUS_BUILD 1
 
 /* Run bit-exactness checks between optimized and c implementations */
 #undef OPUS_CHECK_ASM
@@ -181,7 +181,7 @@
 #undef USE_ALLOCA
 
 /* Use C99 variable-size arrays */
-#undef VAR_ARRAYS
+#define VAR_ARRAYS 1
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #define const
@@ -204,4 +204,8 @@
 #if defined __SUNPRO_CC && !defined __RESTRICT
 # define _Restrict
 # define __restrict__
+#endif
+
+#ifdef ARDUINO
+#define main main_func
 #endif
