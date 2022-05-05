@@ -1,4 +1,4 @@
-# libopus for Arduino
+# The Opus Codec for Arduino
 
 Opus is a codec for interactive speech and audio transmission over the Internet.
 
