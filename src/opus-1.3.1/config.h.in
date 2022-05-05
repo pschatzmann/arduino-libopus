@@ -1,4 +1,4 @@
-/* config.h.in.  Generated from configure.ac by autoheader.  */
+/* opus_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Get CPU Info by asm method */
 #undef CPU_INFO_BY_ASM

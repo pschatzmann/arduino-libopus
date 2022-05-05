@@ -894,7 +894,7 @@ AC_CONFIG_FILES([
     doc/Makefile
     doc/Doxyfile
 ])
-AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_HEADERS([opus_config.h])
 
 AC_OUTPUT
 

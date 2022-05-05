@@ -31,7 +31,7 @@ EXTRA_DIST = PATCHES \
 SYMBIAN_extra_dist = \
 	README.symbian \
 	symbian/bld.inf \
-	symbian/config.h \
+	symbian/opus_config.h \
 	symbian/liboggz.mmp
 
 # Extra files to distribute for the Win32 build.
@@ -50,7 +50,7 @@ SYMBIAN_extra_dist = \
 WIN32_extra_dist = \
 	README.win32 \
 	win32/attgetopt.c \
-	win32/config.h \
+	win32/opus_config.h \
 	win32/getopt.h \
 	win32/liboggz.def \
 	win32/liboggz.dsp \

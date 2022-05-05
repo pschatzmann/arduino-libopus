@@ -25,8 +25,8 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 ***********************************************************************/
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
+#include "opus_config.h"
 #endif
 #ifdef FIXED_POINT
 #include "main_FIX.h"

@@ -76,7 +76,7 @@ Options:
 Supported PROGRAM values:
   aclocal      touch file \`aclocal.m4'
   autoconf     touch file \`configure'
-  autoheader   touch file \`config.h.in'
+  autoheader   touch file \`opus_config.h.in'
   autom4te     touch the output file, or create a stub one
   automake     touch all \`Makefile.in' files
   bison        create \`y.tab.[ch]', if possible, from existing .[ch]
@@ -168,11 +168,11 @@ WARNING: \`$1' is $msg.  You should only need it if
   autoheader*)
     echo 1>&2 "\
 WARNING: \`$1' is $msg.  You should only need it if
-         you modified \`acconfig.h' or \`${configure_ac}'.  You might want
+         you modified \`acopus_config.h' or \`${configure_ac}'.  You might want
          to install the \`Autoconf' and \`GNU m4' packages.  Grab them
          from any GNU archive site."
     files=`sed -n 's/^[ ]*A[CM]_CONFIG_HEADER(\([^)]*\)).*/\1/p' ${configure_ac}`
-    test -z "$files" && files="config.h"
+    test -z "$files" && files="opus_config.h"
     touch_files=
     for f in $files; do
       case $f in

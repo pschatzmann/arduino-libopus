@@ -28,8 +28,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #ifndef SILK_MACROS_H
 #define SILK_MACROS_H
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
+#include "opus_config.h"
 #endif
 
 #include "opus_types.h"

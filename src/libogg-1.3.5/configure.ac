@@ -204,6 +204,6 @@ libogg.spec
 ogg.pc
 ogg-uninstalled.pc
 ])
-AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_HEADERS([opus_config.h])
 
 AC_OUTPUT

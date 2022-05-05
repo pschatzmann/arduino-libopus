@@ -51,7 +51,7 @@
     <ClInclude Include="..\..\include\opus_projection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\win32\config.h">
+    <ClInclude Include="..\..\win32\opus_config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\analysis.h">

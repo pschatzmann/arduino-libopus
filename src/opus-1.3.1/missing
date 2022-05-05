@@ -144,7 +144,7 @@ give_advice ()
       program_details 'autoconf'
       ;;
     autoheader*)
-      echo "You should only need it if you modified 'acconfig.h' or"
+      echo "You should only need it if you modified 'acopus_config.h' or"
       echo "$configure_deps."
       program_details 'autoheader'
       ;;

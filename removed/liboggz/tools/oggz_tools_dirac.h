@@ -32,7 +32,7 @@
 #ifndef __OGGZ_TOOLS_DIRAC_H__
 #define __OGGZ_TOOLS_DIRAC_H__
 
-#include "config.h"
+#include "opus_config.h"
 
 /*
  * Dirac specific granulepos interpretation

@@ -211,7 +211,7 @@ EXTRA_DIST = opus.pc.in \
              Makefile.mips \
              Makefile.unix \
              CMakeLists.txt \
-             config.h.cmake.in \
+             opus_config.h.cmake.in \
              opus_config.cmake \
              opus_functions.cmake \
              opus_sources.cmake \
@@ -232,7 +232,7 @@ EXTRA_DIST = opus.pc.in \
              win32/VS2015/opus.sln \
              win32/VS2015/common.props \
              win32/genversion.bat \
-             win32/config.h
+             win32/opus_config.h
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = opus.pc

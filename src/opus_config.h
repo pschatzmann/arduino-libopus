@@ -1,4 +1,5 @@
-/* config.h.in.  Generated from configure.ac by autoheader.  */
+#pragma once
+/* opus_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Get CPU Info by asm method */
 #undef CPU_INFO_BY_ASM
@@ -31,7 +32,7 @@
 #undef FLOAT_APPROX
 
 /* Fuzzing */
-#define FUZZING 1
+#define FUZZING 0
 
 /* Define to 1 if you have the <alloca.h> header file. */
 #undef HAVE_ALLOCA_H
@@ -206,6 +207,9 @@
 # define __restrict__
 #endif
 
-#ifdef ARDUINO
-#define main main_func
-#endif
+
+/* Do not build reading support */
+#define OGGZ_CONFIG_READ 0
+
+/* Do not build writing support */
+#define OGGZ_CONFIG_WRITE 0

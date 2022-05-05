@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #define __WARPED_AUTOCORRELATION_FIX_MIPSR1_H__
 
 #ifdef HAVE_CONFIG_H
-#include "config.h"
+#include "opus_config.h"
 #endif
 
 #include "main_FIX.h"

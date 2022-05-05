@@ -31,7 +31,7 @@
 */
 
 #ifdef HAVE_CONFIG_H
-#include "config.h"
+#include "opus_config.h"
 #endif
 
 #include <arm_neon.h>

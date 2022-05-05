@@ -36,7 +36,7 @@
  * Conrad Parker <conrad@annodex.net>
  */
 
-#include "config.h"
+#include "opus_config.h"
 
 #include <stdio.h>
 #include <stdlib.h>

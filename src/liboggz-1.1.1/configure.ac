@@ -7,7 +7,7 @@ AC_PREREQ(2.53)
 AC_CANONICAL_TARGET
 
 AM_INIT_AUTOMAKE(liboggz, 1.1.1)
-AM_CONFIG_HEADER(config.h)
+AM_CONFIG_HEADER(opus_config.h)
 
 ################################################################################
 # Set the shared versioning info, according to section 6.3 of the libtool info #

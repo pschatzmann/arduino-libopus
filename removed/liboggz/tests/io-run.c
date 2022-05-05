@@ -36,7 +36,7 @@
    problem in this mode.  Theora, Speex et al. tests to be added.
 */
 
-#include "config.h"
+#include "opus_config.h"
 
 #include <stdio.h>
 #include <string.h>

@@ -2,7 +2,7 @@
   dirac.c
 */
 
-#include "config.h"
+#include "opus_config.h"
 
 #ifdef HAVE_STDINT_H
 #include <stdint.h>

@@ -31,7 +31,7 @@
 #define __CELT_MIPSR1_H__
 
 #ifdef HAVE_CONFIG_H
-#include "config.h"
+#include "opus_config.h"
 #endif
 
 #define CELT_C

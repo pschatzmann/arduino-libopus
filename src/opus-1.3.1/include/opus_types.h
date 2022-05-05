@@ -59,7 +59,7 @@
 #elif defined(_WIN32)
 
 #  if defined(__CYGWIN__)
-#    include <_G_config.h>
+#    include <_G_opus_config.h>
      typedef _G_int32_t opus_int32;
      typedef _G_uint32_t opus_uint32;
      typedef _G_int16 opus_int16;
@@ -161,6 +161,10 @@
    typedef int opus_int32;
    typedef unsigned int opus_uint32;
 
+#endif
+
+#ifdef ARDUINO
+#include "opus_config.h"
 #endif
 
 #endif  /* OPUS_TYPES_H */

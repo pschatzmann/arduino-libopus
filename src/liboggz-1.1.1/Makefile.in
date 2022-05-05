@@ -49,7 +49,7 @@ host_triplet = @host@
 target_triplet = @target@
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
+	$(srcdir)/Makefile.in $(srcdir)/opus_config.h.in \
 	$(srcdir)/oggz-uninstalled.pc.in $(srcdir)/oggz.pc.in \
 	$(top_srcdir)/apache/oggz-chop.conf.in $(top_srcdir)/configure \
 	AUTHORS COPYING ChangeLog INSTALL NEWS TODO config.guess \
@@ -63,7 +63,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = config.h
+CONFIG_HEADER = opus_config.h
 CONFIG_CLEAN_FILES = apache/oggz-chop.conf oggz.pc oggz-uninstalled.pc
 CONFIG_CLEAN_VPATH_FILES =
 SOURCES =
@@ -297,7 +297,7 @@ EXTRA_DIST = PATCHES \
 SYMBIAN_extra_dist = \
 	README.symbian \
 	symbian/bld.inf \
-	symbian/config.h \
+	symbian/opus_config.h \
 	symbian/liboggz.mmp
 
 
@@ -317,7 +317,7 @@ SYMBIAN_extra_dist = \
 WIN32_extra_dist = \
 	README.win32 \
 	win32/attgetopt.c \
-	win32/config.h \
+	win32/opus_config.h \
 	win32/getopt.h \
 	win32/liboggz.def \
 	win32/liboggz.dsp \
@@ -387,7 +387,7 @@ WIN32_extra_dist = \
 	win32/VS2008/oggzvalidate/oggzvalidate_dynamic.vcproj \
 	win32/VS2008/oggzvalidate/oggzvalidate_static.vcproj
 
-all: config.h
+all: opus_config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
 .SUFFIXES:
@@ -426,22 +426,22 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
 
-config.h: stamp-h1
+opus_config.h: stamp-h1
 	@if test ! -f $@; then \
 	  rm -f stamp-h1; \
 	  $(MAKE) $(AM_MAKEFLAGS) stamp-h1; \
 	else :; fi
 
-stamp-h1: $(srcdir)/config.h.in $(top_builddir)/config.status
+stamp-h1: $(srcdir)/opus_config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
-	cd $(top_builddir) && $(SHELL) ./config.status config.h
-$(srcdir)/config.h.in:  $(am__configure_deps) 
+	cd $(top_builddir) && $(SHELL) ./config.status opus_config.h
+$(srcdir)/opus_config.h.in:  $(am__configure_deps) 
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
 
 distclean-hdr:
-	-rm -f config.h stamp-h1
+	-rm -f opus_config.h stamp-h1
 apache/oggz-chop.conf: $(top_builddir)/config.status $(top_srcdir)/apache/oggz-chop.conf.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 oggz.pc: $(top_builddir)/config.status $(srcdir)/oggz.pc.in
@@ -558,7 +558,7 @@ ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	mkid -fID $$unique
 tags: TAGS
 
-TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
+TAGS: tags-recursive $(HEADERS) $(SOURCES) opus_config.h.in $(TAGS_DEPENDENCIES) \
 		$(TAGS_FILES) $(LISP)
 	set x; \
 	here=`pwd`; \
@@ -575,7 +575,7 @@ TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
 	      set "$$@" "$$include_option=$$here/$$subdir/TAGS"; \
 	  fi; \
 	done; \
-	list='$(SOURCES) $(HEADERS) config.h.in $(LISP) $(TAGS_FILES)'; \
+	list='$(SOURCES) $(HEADERS) opus_config.h.in $(LISP) $(TAGS_FILES)'; \
 	unique=`for i in $$list; do \
 	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
 	  done | \
@@ -593,9 +593,9 @@ TAGS: tags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
 	  fi; \
 	fi
 ctags: CTAGS
-CTAGS: ctags-recursive $(HEADERS) $(SOURCES) config.h.in $(TAGS_DEPENDENCIES) \
+CTAGS: ctags-recursive $(HEADERS) $(SOURCES) opus_config.h.in $(TAGS_DEPENDENCIES) \
 		$(TAGS_FILES) $(LISP)
-	list='$(SOURCES) $(HEADERS) config.h.in $(LISP) $(TAGS_FILES)'; \
+	list='$(SOURCES) $(HEADERS) opus_config.h.in $(LISP) $(TAGS_FILES)'; \
 	unique=`for i in $$list; do \
 	    if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
 	  done | \
@@ -790,7 +790,7 @@ distcleancheck: distclean
 	       exit 1; } >&2
 check-am: all-am
 check: check-recursive
-all-am: Makefile $(DATA) config.h
+all-am: Makefile $(DATA) opus_config.h
 installdirs: installdirs-recursive
 installdirs-am:
 	for dir in "$(DESTDIR)$(pkgconfigdir)"; do \

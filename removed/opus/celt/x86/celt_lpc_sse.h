@@ -29,7 +29,7 @@
 #define CELT_LPC_SSE_H
 
 #ifdef HAVE_CONFIG_H
-#include "config.h"
+#include "opus_config.h"
 #endif
 
 #if defined(OPUS_X86_MAY_HAVE_SSE4_1) && defined(FIXED_POINT)

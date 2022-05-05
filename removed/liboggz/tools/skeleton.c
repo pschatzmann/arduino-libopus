@@ -8,10 +8,10 @@
  * and SPARC, unlike Intel and VAX). 
  * On little endian systems, WORDS_BIGENDIAN should be undefined.
  *
- * When using GNU Autotools, the correct value will be written into config.h
+ * When using GNU Autotools, the correct value will be written into opus_config.h
  * if the autoconf macro AC_C_BIGENDIAN is called in configure.ac.
  */
-#include "config.h"
+#include "opus_config.h"
 
 #include <stdlib.h>
 #include <string.h>

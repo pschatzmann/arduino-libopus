@@ -1,4 +1,4 @@
-#include "config.h"
+#include "opus_config.h"
 
 #ifdef HAVE_SYS_TYPES_H
 #include <sys/types.h> /* For off_t not found in stdio.h */

@@ -19,8 +19,8 @@
 
  ********************************************************************/
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
+#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
+#include "opus_config.h"
 #endif
 
 #include <stdlib.h>

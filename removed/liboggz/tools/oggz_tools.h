@@ -33,7 +33,7 @@
 #ifndef __OGGZ_TOOLS_H__
 #define __OGGZ_TOOLS_H__
 
-#include "config.h"
+#include "opus_config.h"
 #include <getopt.h>
 
 const char *

@@ -163,7 +163,7 @@ DIST_COMMON = $(srcdir)/Makefile.am $(top_srcdir)/configure \
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
-CONFIG_HEADER = config.h
+CONFIG_HEADER = opus_config.h
 CONFIG_CLEAN_FILES = opus.pc opus-uninstalled.pc celt/arm/armopts.s
 CONFIG_CLEAN_VPATH_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
@@ -833,7 +833,7 @@ am__recursive_targets = \
 AM_RECURSIVE_TARGETS = $(am__recursive_targets:-recursive=) TAGS CTAGS \
 	cscope check recheck distdir dist dist-all distcheck
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) \
-	$(LISP)config.h.in
+	$(LISP)opus_config.h.in
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
 # *not* preserved.
@@ -1030,7 +1030,7 @@ TEST_LOG_DRIVER = $(SHELL) $(top_srcdir)/test-driver
 TEST_LOG_COMPILE = $(TEST_LOG_COMPILER) $(AM_TEST_LOG_FLAGS) \
 	$(TEST_LOG_FLAGS)
 am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/celt_headers.mk \
-	$(srcdir)/celt_sources.mk $(srcdir)/config.h.in \
+	$(srcdir)/celt_sources.mk $(srcdir)/opus_config.h.in \
 	$(srcdir)/opus-uninstalled.pc.in $(srcdir)/opus.pc.in \
 	$(srcdir)/opus_headers.mk $(srcdir)/opus_sources.mk \
 	$(srcdir)/silk_headers.mk $(srcdir)/silk_sources.mk \
@@ -1568,7 +1568,7 @@ EXTRA_DIST = opus.pc.in \
              Makefile.mips \
              Makefile.unix \
              CMakeLists.txt \
-             config.h.cmake.in \
+             opus_config.h.cmake.in \
              opus_config.cmake \
              opus_functions.cmake \
              opus_sources.cmake \
@@ -1589,7 +1589,7 @@ EXTRA_DIST = opus.pc.in \
              win32/VS2015/opus.sln \
              win32/VS2015/common.props \
              win32/genversion.bat \
-             win32/config.h
+             win32/opus_config.h
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = opus.pc
@@ -1611,7 +1611,7 @@ OPT_UNIT_TEST_OBJ = $(celt_tests_test_unit_mathops_SOURCES:.c=.o) \
 @HAVE_ARM_NEON_INTR_TRUE@                    $(SILK_SOURCES_ARM_NEON_INTR:.c=.lo) \
 @HAVE_ARM_NEON_INTR_TRUE@                    $(SILK_SOURCES_FIXED_ARM_NEON_INTR:.c=.lo)
 
-all: $(BUILT_SOURCES) config.h
+all: $(BUILT_SOURCES) opus_config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 
 .SUFFIXES:
@@ -1651,20 +1651,20 @@ $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	$(am__cd) $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
 $(am__aclocal_m4_deps):
 
-config.h: stamp-h1
+opus_config.h: stamp-h1
 	@test -f $@ || rm -f stamp-h1
 	@test -f $@ || $(MAKE) $(AM_MAKEFLAGS) stamp-h1
 
-stamp-h1: $(srcdir)/config.h.in $(top_builddir)/config.status
+stamp-h1: $(srcdir)/opus_config.h.in $(top_builddir)/config.status
 	@rm -f stamp-h1
-	cd $(top_builddir) && $(SHELL) ./config.status config.h
-$(srcdir)/config.h.in: @MAINTAINER_MODE_TRUE@ $(am__configure_deps) 
+	cd $(top_builddir) && $(SHELL) ./config.status opus_config.h
+$(srcdir)/opus_config.h.in: @MAINTAINER_MODE_TRUE@ $(am__configure_deps) 
 	($(am__cd) $(top_srcdir) && $(AUTOHEADER))
 	rm -f stamp-h1
 	touch $@
 
 distclean-hdr:
-	-rm -f config.h stamp-h1
+	-rm -f opus_config.h stamp-h1
 opus.pc: $(top_builddir)/config.status $(srcdir)/opus.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 opus-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/opus-uninstalled.pc.in
@@ -3192,7 +3192,7 @@ check-am: all-am
 check: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) check-recursive
 all-am: Makefile $(LTLIBRARIES) $(PROGRAMS) $(DATA) $(HEADERS) \
-		config.h all-local
+		opus_config.h all-local
 installdirs: installdirs-recursive
 installdirs-am:
 	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(m4datadir)" "$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(pkgincludedir)"; do \

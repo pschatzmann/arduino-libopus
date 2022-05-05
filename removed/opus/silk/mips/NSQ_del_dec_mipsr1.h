@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 #define __NSQ_DEL_DEC_MIPSR1_H__
 
 #ifdef HAVE_CONFIG_H
-#include "config.h"
+#include "opus_config.h"
 #endif
 
 #include "main.h"

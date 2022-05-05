@@ -25,12 +25,12 @@
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
+#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
+# include "opus_config.h"
 #endif
 
 #ifndef OPUS_BUILD
-# error "OPUS_BUILD _MUST_ be defined to build Opus. This probably means you need other defines as well, as in a config.h. See the included build files for details."
+# error "OPUS_BUILD _MUST_ be defined to build Opus. This probably means you need other defines as well, as in a opus_config.h. See the included build files for details."
 #endif
 
 #if defined(__GNUC__) && (__GNUC__ >= 2) && !defined(__OPTIMIZE__) && !defined(OPUS_WILL_BE_SLOW)

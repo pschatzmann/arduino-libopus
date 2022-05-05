@@ -1,4 +1,4 @@
-/* config.h.in.  Generated from configure.ac by autoheader.  */
+/* opus_config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Do not build with CRC */
 #undef DISABLE_CRC

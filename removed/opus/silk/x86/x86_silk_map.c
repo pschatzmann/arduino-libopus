@@ -26,7 +26,7 @@
 */
 
 #if defined(HAVE_CONFIG_H)
-#include "config.h"
+#include "opus_config.h"
 #endif
 
 #include "celt/x86/x86cpu.h"

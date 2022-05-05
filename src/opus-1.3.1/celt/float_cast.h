@@ -58,7 +58,7 @@
 
 /*      The presence of the required functions are detected during the configure
 **      process and the values HAVE_LRINT and HAVE_LRINTF are set accordingly in
-**      the config.h file.
+**      the opus_config.h file.
 */
 
 /* With GCC, when SSE is available, the fastest conversion is cvtss2si. */

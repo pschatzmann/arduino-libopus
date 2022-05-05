@@ -33,7 +33,7 @@
 #ifndef __OGGZ_BYTEORDER_H__
 #define __OGGZ_BYTEORDER_H__
 
-#include "config.h"
+#include "opus_config.h"
 
 #ifdef _UNUSED_
 static  unsigned short

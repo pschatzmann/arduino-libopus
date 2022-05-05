@@ -30,7 +30,7 @@
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "config.h"
+#include "opus_config.h"
 
 #ifndef WIN32
 #  define oggz_stat_regular(mode) (S_ISREG((mode)) || S_ISLNK((mode)))

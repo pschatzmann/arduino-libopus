@@ -233,7 +233,7 @@
     <ClInclude Include="..\..\silk\tuning_parameters.h" />
     <ClInclude Include="..\..\silk\typedef.h" />
     <ClInclude Include="..\..\silk\x86\main_sse.h" />
-    <ClInclude Include="..\..\win32\config.h" />
+    <ClInclude Include="..\..\win32\opus_config.h" />
     <ClInclude Include="..\..\src\analysis.h" />
     <ClInclude Include="..\..\src\mapping_matrix.h" />
     <ClInclude Include="..\..\src\mlp.h" />
