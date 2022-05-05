@@ -44,7 +44,7 @@ In order to create an Arduino compatible library I executed the following steps:
 - Added the projects to the src directory
 - Symlinked the header files into src
 - Symlinked additional header subdirectories
-- Moved offending code which was platform specific or contained a main() to the /removed directory
+- Moved offending code which was platform specific or contained a main() to the /incompatible directory
 - Renamed all config.h to opus_config.h to avoid conflicts with the standard Arduino environment. I disabled the floating point api and activated the fixed point api instead!
 - Added a opus_config.h to the src directory 
 - Replaced #ifdef HAVE_CONFIG_H with #if defined(HAVE_CONFIG_H) || defined(ARDUINO) to make sure the config is used
