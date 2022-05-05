@@ -29,6 +29,9 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
+
 #include <stdlib.h>
 #include "main_FLP.h"
 #include "tuning_parameters.h"
@@ -433,3 +436,5 @@ static OPUS_INLINE void silk_LBRR_encode_FLP(
         silk_memcpy( psEncCtrl->Gains, TempGains, psEnc->sCmn.nb_subfr * sizeof( silk_float ) );
     }
 }
+
+#endif

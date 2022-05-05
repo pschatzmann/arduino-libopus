@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 /*****************************************************************************
 * Pitch analyser function
 ******************************************************************************/
@@ -628,3 +630,5 @@ static void silk_P_Ana_calc_energy_st3(
         target_ptr += sf_length;
     }
 }
+
+#endif

@@ -1,23 +1,23 @@
 #pragma once
 /* opus_config.h.in.  Generated from configure.ac by autoheader.  */
 
-/* Get CPU Info by asm method */
-#undef CPU_INFO_BY_ASM
+// /* Get CPU Info by asm method */
+// #undef CPU_INFO_BY_ASM
 
-/* Get CPU Info by c method */
-#define CPU_INFO_BY_C 1
+// /* Get CPU Info by c method */
+// #undef CPU_INFO_BY_C 
 
-/* Custom modes */
-#undef CUSTOM_MODES
+// /* Custom modes */
+// #undef CUSTOM_MODES
 
 /* Do not build the float API */
-#undef DISABLE_FLOAT_API 
+#define DISABLE_FLOAT_API 1
 
 /* Disable bitstream fixes from RFC 8251 */
 #undef DISABLE_UPDATE_DRAFT
 
 /* Assertions */
-#undef ENABLE_ASSERTIONS
+#define ENABLE_ASSERTIONS 1
 
 /* Hardening */
 #undef ENABLE_HARDENING
@@ -26,13 +26,13 @@
 #undef FIXED_DEBUG
 
 /* Compile as fixed-point (for machines without a fast enough FPU) */
-#undef FIXED_POINT 
+#define FIXED_POINT 1
 
 /* Float approximations */
 #undef FLOAT_APPROX
 
 /* Fuzzing */
-#define FUZZING 0
+#undef FUZZING 
 
 /* Define to 1 if you have the <alloca.h> header file. */
 #undef HAVE_ALLOCA_H
@@ -82,107 +82,113 @@
 /* Define to the sub-directory where libtool stores uninstalled libraries. */
 #undef LT_OBJDIR
 
-/* Make use of ARM asm optimization */
-#undef OPUS_ARM_ASM
+// /* Make use of ARM asm optimization */
+// #undef OPUS_ARM_ASM
 
-/* Use generic ARMv4 inline asm optimizations */
-#undef OPUS_ARM_INLINE_ASM
+// /* Use generic ARMv4 inline asm optimizations */
+// #undef OPUS_ARM_INLINE_ASM
 
-/* Use ARMv5E inline asm optimizations */
-#undef OPUS_ARM_INLINE_EDSP
+// /* Use ARMv5E inline asm optimizations */
+// #undef OPUS_ARM_INLINE_EDSP
 
-/* Use ARMv6 inline asm optimizations */
-#undef OPUS_ARM_INLINE_MEDIA
+// /* Use ARMv6 inline asm optimizations */
+// #undef OPUS_ARM_INLINE_MEDIA
 
-/* Use ARM NEON inline asm optimizations */
-#undef OPUS_ARM_INLINE_NEON
+// /* Use ARM NEON inline asm optimizations */
+// #undef OPUS_ARM_INLINE_NEON
 
-/* Define if assembler supports EDSP instructions */
-#undef OPUS_ARM_MAY_HAVE_EDSP
+// /* Define if assembler supports EDSP instructions */
+// #undef OPUS_ARM_MAY_HAVE_EDSP
 
-/* Define if assembler supports ARMv6 media instructions */
-#undef OPUS_ARM_MAY_HAVE_MEDIA
+// /* Define if assembler supports ARMv6 media instructions */
+// #undef OPUS_ARM_MAY_HAVE_MEDIA
 
-/* Define if compiler supports NEON instructions */
-#undef OPUS_ARM_MAY_HAVE_NEON
+// /* Define if compiler supports NEON instructions */
+// #undef OPUS_ARM_MAY_HAVE_NEON
 
-/* Compiler supports ARMv7/Aarch64 Neon Intrinsics */
-#undef OPUS_ARM_MAY_HAVE_NEON_INTR
+// /* Compiler supports ARMv7/Aarch64 Neon Intrinsics */
+// #undef OPUS_ARM_MAY_HAVE_NEON_INTR
 
-/* Define if binary requires Aarch64 Neon Intrinsics */
-#undef OPUS_ARM_PRESUME_AARCH64_NEON_INTR
+// /* Define if binary requires Aarch64 Neon Intrinsics */
+// #undef OPUS_ARM_PRESUME_AARCH64_NEON_INTR
 
-/* Define if binary requires EDSP instruction support */
-#undef OPUS_ARM_PRESUME_EDSP
+// /* Define if binary requires EDSP instruction support */
+// #undef OPUS_ARM_PRESUME_EDSP
 
-/* Define if binary requires ARMv6 media instruction support */
-#undef OPUS_ARM_PRESUME_MEDIA
+// /* Define if binary requires ARMv6 media instruction support */
+// #undef OPUS_ARM_PRESUME_MEDIA
 
-/* Define if binary requires NEON instruction support */
-#undef OPUS_ARM_PRESUME_NEON
+// /* Define if binary requires NEON instruction support */
+// #undef OPUS_ARM_PRESUME_NEON
 
-/* Define if binary requires NEON intrinsics support */
-#undef OPUS_ARM_PRESUME_NEON_INTR
+// /* Define if binary requires NEON intrinsics support */
+// #undef OPUS_ARM_PRESUME_NEON_INTR
 
 /* This is a build of OPUS */
 #define OPUS_BUILD 1
 
-/* Run bit-exactness checks between optimized and c implementations */
-#undef OPUS_CHECK_ASM
+// /* Run bit-exactness checks between optimized and c implementations */
+// #undef OPUS_CHECK_ASM
 
-/* Use run-time CPU capabilities detection */
-#undef OPUS_HAVE_RTCD
+// /* Use run-time CPU capabilities detection */
+// #undef OPUS_HAVE_RTCD
 
-/* Compiler supports X86 AVX Intrinsics */
-#undef OPUS_X86_MAY_HAVE_AVX
+// /* Compiler supports X86 AVX Intrinsics */
+// #undef OPUS_X86_MAY_HAVE_AVX
 
-/* Compiler supports X86 SSE Intrinsics */
-#undef OPUS_X86_MAY_HAVE_SSE
+// /* Compiler supports X86 SSE Intrinsics */
+// #undef OPUS_X86_MAY_HAVE_SSE
 
-/* Compiler supports X86 SSE2 Intrinsics */
-#undef OPUS_X86_MAY_HAVE_SSE2
+// /* Compiler supports X86 SSE2 Intrinsics */
+// #undef OPUS_X86_MAY_HAVE_SSE2
 
-/* Compiler supports X86 SSE4.1 Intrinsics */
-#undef OPUS_X86_MAY_HAVE_SSE4_1
+// /* Compiler supports X86 SSE4.1 Intrinsics */
+// #undef OPUS_X86_MAY_HAVE_SSE4_1
 
-/* Define if binary requires AVX intrinsics support */
-#undef OPUS_X86_PRESUME_AVX
+// /* Define if binary requires AVX intrinsics support */
+// #undef OPUS_X86_PRESUME_AVX
 
-/* Define if binary requires SSE intrinsics support */
-#undef OPUS_X86_PRESUME_SSE
+// /* Define if binary requires SSE intrinsics support */
+// #undef OPUS_X86_PRESUME_SSE
 
-/* Define if binary requires SSE2 intrinsics support */
-#undef OPUS_X86_PRESUME_SSE2
+// /* Define if binary requires SSE2 intrinsics support */
+// #undef OPUS_X86_PRESUME_SSE2
 
-/* Define if binary requires SSE4.1 intrinsics support */
-#undef OPUS_X86_PRESUME_SSE4_1
+// /* Define if binary requires SSE4.1 intrinsics support */
+// #undef OPUS_X86_PRESUME_SSE4_1
 
-/* Define to the address where bug reports for this package should be sent. */
-#undef PACKAGE_BUGREPORT
+// /* Define to the address where bug reports for this package should be sent. */
+// #undef PACKAGE_BUGREPORT
 
-/* Define to the full name of this package. */
-#undef PACKAGE_NAME
+// /* Define to the full name of this package. */
+// #undef PACKAGE_NAME
 
-/* Define to the full name and version of this package. */
-#undef PACKAGE_STRING
+// /* Define to the full name and version of this package. */
+// #undef PACKAGE_STRING
 
-/* Define to the one symbol short name of this package. */
-#undef PACKAGE_TARNAME
+// /* Define to the one symbol short name of this package. */
+// #undef PACKAGE_TARNAME
 
-/* Define to the home page for this package. */
-#undef PACKAGE_URL
+// /* Define to the home page for this package. */
+// #undef PACKAGE_URL
 
-/* Define to the version of this package. */
-#undef PACKAGE_VERSION
+// /* Define to the version of this package. */
+// #undef PACKAGE_VERSION
 
-/* Define to 1 if you have the ANSI C header files. */
-#undef STDC_HEADERS
+// /* Define to 1 if you have the ANSI C header files. */
+// #undef STDC_HEADERS
 
 /* Make use of alloca */
-#undef USE_ALLOCA
+#undef USE_ALLOCA 
 
 /* Use C99 variable-size arrays */
-#define VAR_ARRAYS 1
+#undef VAR_ARRAYS 
+
+/* Simulated Stack using the Heap */ 
+#define NONTHREADSAFE_PSEUDOSTACK 1
+
+/* Simulated Stack Size using the Heap */ 
+#define GLOBAL_STACK_SIZE 60000
 
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const

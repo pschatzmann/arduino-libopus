@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 #define MAX_ITERATIONS_RESIDUAL_NRG         10
@@ -115,3 +117,5 @@ void silk_residual_energy_FLP(
         nrgs[ 3 ] = ( silk_float )( gains[ 3 ] * gains[ 3 ] * silk_energy_FLP( LPC_res_ptr + 1 * shift, subfr_length ) );
     }
 }
+
+#endif

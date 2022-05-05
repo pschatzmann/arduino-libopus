@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FIX.h"
 #include "SigProc_FLP.h"
 #include "define.h"
@@ -71,3 +73,5 @@ silk_float silk_LPC_inverse_pred_gain_FLP(  /* O    return inverse prediction ga
     }
     return (silk_float)invGain;
 }
+
+#endif

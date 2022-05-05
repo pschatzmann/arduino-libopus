@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 /* Wrappers. Calls flp / fix code */
@@ -205,3 +207,5 @@ void silk_quant_LTP_gains_FLP(
 
     *pred_gain_dB = (silk_float)pred_gain_dB_Q7 * ( 1.0f / 128.0f );
 }
+
+#endif

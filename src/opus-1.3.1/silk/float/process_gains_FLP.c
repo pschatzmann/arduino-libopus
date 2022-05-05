@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 #include "tuning_parameters.h"
 
@@ -101,3 +103,5 @@ void silk_process_gains_FLP(
     silk_assert( psEncCtrl->Lambda > 0.0f );
     silk_assert( psEncCtrl->Lambda < 2.0f );
 }
+
+#endif

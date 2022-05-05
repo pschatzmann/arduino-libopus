@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FLP.h"
 
 /* multiply a vector by a constant */
@@ -54,3 +56,5 @@ void silk_scale_vector_FLP(
         data1[ i ] *= gain;
     }
 }
+
+#endif

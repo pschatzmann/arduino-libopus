@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 /* Add noise to matrix diagonal */
@@ -46,3 +48,5 @@ void silk_regularize_correlations_FLP(
     }
     xx[ 0 ] += noise;
 }
+
+#endif

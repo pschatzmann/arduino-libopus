@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 void silk_LTP_scale_ctrl_FLP(
@@ -50,3 +52,5 @@ void silk_LTP_scale_ctrl_FLP(
 
     psEncCtrl->LTP_scale = (silk_float)silk_LTPScales_table_Q14[ psEnc->sCmn.indices.LTP_scaleIndex ] / 16384.0f;
 }
+
+#endif

@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 void silk_LTP_analysis_filter_FLP(
@@ -73,3 +75,5 @@ void silk_LTP_analysis_filter_FLP(
         x_ptr       += subfr_length;
     }
 }
+
+#endif

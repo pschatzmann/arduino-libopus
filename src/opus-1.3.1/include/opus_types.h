@@ -165,6 +165,8 @@
 
 #ifdef ARDUINO
 #include "opus_config.h"
+#include <assert.h>
+
 #endif
 
 #endif  /* OPUS_TYPES_H */

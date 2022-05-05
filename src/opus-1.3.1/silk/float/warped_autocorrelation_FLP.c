@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 /* Autocorrelations for a warped frequency axis */
@@ -71,3 +73,5 @@ void silk_warped_autocorrelation_FLP(
         corr[ i ] = ( silk_float )C[ i ];
     }
 }
+
+#endif

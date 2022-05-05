@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 
 /* Apply sine window to signal vector   */
@@ -79,3 +81,4 @@ void silk_apply_sine_window_FLP(
         S1 = c * S0 - S1;
     }
 }
+#endif

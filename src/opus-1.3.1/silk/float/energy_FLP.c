@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FLP.h"
 
 /* sum of squares of a silk_float array, with result as double */
@@ -57,3 +59,5 @@ double silk_energy_FLP(
     silk_assert( result >= 0.0 );
     return result;
 }
+
+#endif

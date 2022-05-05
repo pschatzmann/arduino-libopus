@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FLP.h"
 
 /* Chirp (bw expand) LP AR filter */
@@ -47,3 +49,5 @@ void silk_bwexpander_FLP(
     }
     ar[ d - 1 ] *=  cfac;
 }
+
+#endif

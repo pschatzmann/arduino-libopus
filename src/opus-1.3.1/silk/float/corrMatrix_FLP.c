@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 /**********************************************************************
  * Correlation matrix computations for LS estimate.
  **********************************************************************/
@@ -91,3 +93,5 @@ void silk_corrMatrix_FLP(
         ptr2--;                                 /* Next column of X */
     }
 }
+
+#endif

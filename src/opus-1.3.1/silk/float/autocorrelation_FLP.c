@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "typedef.h"
 #include "SigProc_FLP.h"
 
@@ -50,3 +52,5 @@ void silk_autocorrelation_FLP(
         results[ i ] =  (silk_float)silk_inner_product_FLP( inputData, inputData + i, inputDataSize - i );
     }
 }
+
+#endif

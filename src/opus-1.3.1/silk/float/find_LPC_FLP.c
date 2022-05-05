@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "define.h"
 #include "main_FLP.h"
 #include "tuning_parameters.h"
@@ -102,3 +104,5 @@ void silk_find_LPC_FLP(
     celt_assert( psEncC->indices.NLSFInterpCoef_Q2 == 4 ||
         ( psEncC->useInterpolatedNLSFs && !psEncC->first_frame_after_reset && psEncC->nb_subfr == MAX_NB_SUBFR ) );
 }
+
+#endif

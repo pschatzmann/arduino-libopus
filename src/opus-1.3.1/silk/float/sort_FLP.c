@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 /* Insertion sort (fast for already almost sorted arrays):  */
 /* Best case:  O(n)   for an already sorted array           */
 /* Worst case: O(n^2) for an inversely sorted array         */
@@ -81,3 +83,5 @@ void silk_insertion_sort_decreasing_FLP(
         }
     }
 }
+
+#endif

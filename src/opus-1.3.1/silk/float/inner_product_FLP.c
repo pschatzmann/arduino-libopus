@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FLP.h"
 
 /* inner product of two silk_float arrays, with result as double */
@@ -57,3 +59,5 @@ double silk_inner_product_FLP(
 
     return result;
 }
+
+#endif

@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FLP.h"
 
 /* step up function, converts reflection coefficients to prediction coefficients */
@@ -52,3 +54,5 @@ void silk_k2a_FLP(
         A[ k ] = -rck;
     }
 }
+
+#endif

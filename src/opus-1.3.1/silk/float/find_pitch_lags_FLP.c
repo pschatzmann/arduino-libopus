@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include <stdlib.h>
 #include "main_FLP.h"
 #include "tuning_parameters.h"
@@ -130,3 +132,5 @@ void silk_find_pitch_lags_FLP(
         psEnc->LTPCorr = 0;
     }
 }
+
+#endif

@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include <stdlib.h>
 #include "main_FLP.h"
 
@@ -246,4 +248,6 @@ void silk_LPC_analysis_filter_FLP(
     /* Set first Order output samples to zero */
     silk_memset( r_LPC, 0, Order * sizeof( silk_float ) );
 }
+
+#endif
 

@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if defined(FIXED_POINT)
+
 /***********************************************************
 * Pitch analyser function
 ********************************************************** */
@@ -719,3 +721,5 @@ static void silk_P_Ana_calc_energy_st3(
     }
     RESTORE_STACK;
 }
+
+#endif

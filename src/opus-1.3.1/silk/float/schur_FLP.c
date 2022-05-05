@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "SigProc_FLP.h"
 
 silk_float silk_schur_FLP(                  /* O    returns residual energy                                     */
@@ -68,3 +70,5 @@ silk_float silk_schur_FLP(                  /* O    returns residual energy     
     /* Return residual energy */
     return (silk_float)C[ 0 ][ 1 ];
 }
+
+#endif

@@ -29,6 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 #include "opus_config.h"
 #endif
 
+#if DISABLE_FLOAT_API!=1
+
 #include "main_FLP.h"
 #include "tuning_parameters.h"
 
@@ -348,3 +350,5 @@ void silk_noise_shape_analysis_FLP(
         psEncCtrl->Tilt[ k ]           = psShapeSt->Tilt_smth;
     }
 }
+
+#endif
