@@ -37,6 +37,10 @@ git clone https://github.com/pschatzmann/arduino-libopus.git
 
 ```
 
+## Usage
+
+I recommend to use this library together with the [arduino-audio-tools](https://github.com/pschatzmann/arduino-audio-tools). Further information can be found in the [Wiki of the audio-tools](https://github.com/pschatzmann/arduino-audio-tools/wiki/Encoding-and-Decoding-of-Audio)!
+
 ## Design
 
 In order to create an Arduino compatible library I executed the following steps:
