@@ -59,7 +59,7 @@
 
 #include <sys/types.h>
 
-typedef size_t oggz_off_t;
+typedef long oggz_off_t;
 
 #define PRI_OGGZ_OFF_T "ll"
 
