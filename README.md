@@ -37,9 +37,10 @@ git clone https://github.com/pschatzmann/arduino-libopus.git
 
 ```
 
-## Usage
+## Documentation
 
-I recommend to use this library together with the [arduino-audio-tools](https://github.com/pschatzmann/arduino-audio-tools). Further information can be found in the [Wiki of the audio-tools](https://github.com/pschatzmann/arduino-audio-tools/wiki/Encoding-and-Decoding-of-Audio)!
+I recommend to use this library together with my [Arduino Audio Tools](https://github.com/pschatzmann/arduino-audio-tools). 
+This is just one of many __codecs__ that I have collected so far: Further details can be found in the [Encoding and Decoding Wiki](https://github.com/pschatzmann/arduino-audio-tools/wiki/Encoding-and-Decoding-of-Audio) of the Audio Tools.
 
 ## Design
 
