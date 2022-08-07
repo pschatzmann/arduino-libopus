@@ -1,1 +1,4 @@
-../opus-1.3.1/celt/cpu_support.h
+#pragma once
+// link to original location
+#include "../../src/opus-1.3.1/celt/cpu_support.h"
+

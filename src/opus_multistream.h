@@ -1,1 +1,4 @@
-opus-1.3.1/include/opus_multistream.h
+#pragma once
+// link to original location
+#include "../src/opus-1.3.1/include/opus_multistream.h"
+
