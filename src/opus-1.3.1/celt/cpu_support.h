@@ -28,6 +28,7 @@
 #ifndef CPU_SUPPORT_H
 #define CPU_SUPPORT_H
 
+#include "opus_config.h"
 #include "opus_types.h"
 #include "opus_defines.h"
 

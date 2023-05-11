@@ -34,6 +34,7 @@
 #ifndef ARCH_H
 #define ARCH_H
 
+#include "opus_config.h"
 #include "opus_types.h"
 #include "opus_defines.h"
 
