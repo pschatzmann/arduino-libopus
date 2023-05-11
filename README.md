@@ -49,6 +49,7 @@ In order to create an Arduino compatible library I executed the following steps:
 - Added the projects to the src directory
 - Symlinked the header files into src
 - Symlinked additional header subdirectories
+- Replaced symlinks with regular files that conain an #include to the originally symlinked location, because Windows does not support symlinks properly
 - Moved offending code which was platform specific or contained a main() to the /incompatible directory
 - Renamed all config.h to opus_config.h to avoid conflicts with the standard Arduino environment. I disabled the floating point api and activated the fixed point api instead!
 - Added a opus_config.h to the src directory 
