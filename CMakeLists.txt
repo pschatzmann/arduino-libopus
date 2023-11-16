@@ -13,7 +13,7 @@ file(GLOB_RECURSE SRC_LIST_C CONFIGURE_DEPENDS  "${PROJECT_SOURCE_DIR}/src/*.c" 
 add_library (arduino_libopus ${SRC_LIST_C})
 
 # prevent compile errors
-target_compile_options(arduino_libopus PRIVATE -DARDUINO)
+target_compile_options(arduino_libopus PRIVATE -DARDUINO -DHAVE_CONFIG_H)
 
 
 # define location for header files
