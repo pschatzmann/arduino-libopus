@@ -25,9 +25,7 @@
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#if defined(HAVE_CONFIG_H) || defined(ARDUINO)
-#include "opus_config.h"
-#endif
+#if !defined(ARDUINO)
 
 #include "opus.h"
 #include <stdio.h>
@@ -215,3 +213,5 @@ int main(int argc, char *argv[])
    fclose(fout);
    return EXIT_SUCCESS;
 }
+
+#endif
