@@ -172,7 +172,9 @@ opus_int silk_pitch_analysis_core(                  /* O    Voicing estimate: 0 
 
     /* Decimate again to 4 kHz */
     silk_memset( filt_state, 0, 2 * sizeof( opus_int32 ) );/* Set state to zero */
-    ALLOC( frame_4kHz, frame_length_4kHz, opus_int16 );
+    opus_int32 *tmp;
+    ALLOC( tmp, frame_length_4kHz / 2 + 1, opus_int32 );
+    frame_4kHz = (opus_int16*)tmp;
     silk_resampler_down2( filt_state, frame_4kHz, frame_8kHz, frame_length_8kHz );
 
     /* Low-pass filter */
