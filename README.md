@@ -1,3 +1,6 @@
+This library has been retired: use the new updated [codec-opus](https://github.com/pschatzmann/codec-opus) instead!
+
+
 # The Opus Codec for Arduino
 
 Opus is a codec for interactive speech and audio transmission over the Internet.
